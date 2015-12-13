@@ -1,0 +1,6 @@
+bin/
+build_logs/
+local_install/
+obj/
+*.*~
+
