@@ -10,6 +10,7 @@ includedirs
 					{
 						"include/lua/",
 						"include/",
+						"../../../extlib/include/",
 						"/usr/local/include",
 						"/usr/include"
 					} 
