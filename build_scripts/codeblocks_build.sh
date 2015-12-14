@@ -1,7 +1,7 @@
 #!/bin/bash 
 cd ..
-premake4 clean
-premake4 codeblocks linux
+./premake4-linux clean
+./premake4-linux codeblocks linux
 
 if [ -d build_logs ]; then 
 	rm -rf build_logs
@@ -24,6 +24,6 @@ cp -r ./include/*.h ./local_install/oolua
 cp ./bin/Debug/*.a ./local_install/
 cp ./bin/Release/*.a ./local_install/
 
-premake4 clean
+./premake4-linux clean
 
 cd build_scripts

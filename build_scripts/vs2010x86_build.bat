@@ -1,8 +1,8 @@
 :: build the solution
 @echo OFF
 cd ..
-premake4.exe clean 
-premake4.exe vs2010 windows
+premake4-win32.exe clean 
+premake4-win32.exe vs2010 windows
 
 if exist .\build_logs  rd /S /Q .\build_logs
 
@@ -22,4 +22,4 @@ copy .\include\*.h .\local_install\oolua\*.h
 copy .\bin\Debug\*.lib .\local_install\
 copy .\bin\Release\*.lib .\local_install\
 
-premake4.exe clean 
+premake4-win32.exe clean 
