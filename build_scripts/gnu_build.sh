@@ -1,6 +1,6 @@
 
 cd ..
-
+pwd
 chmod a+x ./premake4-linux
 
 ./premake4-linux clean
