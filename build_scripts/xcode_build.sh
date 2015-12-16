@@ -1,5 +1,8 @@
 #!/bin/bash 
 cd ..
+
+chmod a+x ./premake4-mac
+
 ./premake4-mac clean
 ./premake4-mac xcode3 macosx
 

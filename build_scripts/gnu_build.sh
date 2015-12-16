@@ -1,5 +1,8 @@
 #!/bin/bash 
 cd ..
+
+chmod a+x ./premake4-linux
+
 ./premake4-linux clean
 ./premake4-linux gmake linux
 
