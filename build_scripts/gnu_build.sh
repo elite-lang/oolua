@@ -1,4 +1,4 @@
-#!/bin/bash 
+
 cd ..
 
 chmod a+x ./premake4-linux
