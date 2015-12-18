@@ -24,4 +24,4 @@ copy .\bin\Release\*.lib .\local_install\
 
 premake5-win32.exe clean 
 
-cd build_script
+cd build_scripts
