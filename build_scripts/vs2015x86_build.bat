@@ -1,0 +1,27 @@
+:: build the solution
+@echo OFF
+cd ..
+premake5-win32.exe clean 
+premake5-win32.exe vs2015 windows
+
+if exist .\build_logs  rd /S /Q .\build_logs
+
+md .\build_logs
+
+if exist local_install rd /S /Q local_install
+
+md local_install
+md local_install\oolua
+
+call "%VS140COMNTOOLS%vsvars32.bat" x86
+
+devenv  "%cd%\oolua.sln" /build debug /project "%cd%\oolua.vcxproj" > .\build_logs\oolua_vs2015_debug.log
+devenv  "%cd%\oolua.sln" /build release /project "%cd%\oolua.vcxproj" > .\build_logs\oolua_vs2015_release.log
+
+copy .\include\*.h .\local_install\oolua\*.h 
+copy .\bin\Debug\*.lib .\local_install\
+copy .\bin\Release\*.lib .\local_install\
+
+premake5-win32.exe clean 
+
+cd build_scripts
