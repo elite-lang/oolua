@@ -13,7 +13,7 @@ if exist local_install rd /S /Q local_install
 md local_install
 md local_install\oolua
 
-call "%VS140COMNTOOLS%vsvars32.bat" x86
+call "%VS140COMNTOOLS%..\..\VC\vcvarsall.bat" x86
 
 devenv  "%cd%\oolua.sln" /build debug /project "%cd%\oolua.vcxproj" > .\build_logs\oolua_vs2015_debug.log
 devenv  "%cd%\oolua.sln" /build release /project "%cd%\oolua.vcxproj" > .\build_logs\oolua_vs2015_release.log
